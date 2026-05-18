@@ -1,26 +1,37 @@
 {
   "name": "onboarding",
-  "version": "1.0.0",
-  "description": "Welcome to 8by8! We are thrilled to have you on our team.",
+  "version": "0.0.0",
+  "description": "Welcome to 8by8! This project will help you learn how to contribute to our codebases.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest",
+    "storybook": "storybook dev -p 6006"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/8by8-org/onboarding.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "author": "8by8",
+  "license": "UNLICENSED",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/8by8-org/onboarding/issues"
   },
   "homepage": "https://github.com/8by8-org/onboarding#readme",
   "devDependencies": {
+    "@storybook/react-vite": "^10.3.6",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "prettier": "^3.8.3",
+    "storybook": "^10.3.6",
     "typescript": "^6.0.3",
     "vitest": "^4.1.5"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "vite": "^8.0.11"
   }
 }

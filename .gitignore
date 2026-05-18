@@ -1,4 +1,6 @@
-.env
 node_modules/
-.vscode
-.idea
+.env
+coverage/
+.vscode/
+.idea/
+.DS_Store

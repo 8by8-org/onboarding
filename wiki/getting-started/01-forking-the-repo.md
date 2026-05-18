@@ -60,3 +60,12 @@ This will create a new branch with the name `onboard-dvorakjt` and switch to
 the newly created branch. The `-b` flag tells Git to create a new branch. The 
 branch name can be anything you like. We chose `onboard-<your-username>` 
 because this new branch will be all about onboarding YOU!
+
+To verify the name of the branch that you're working from, execute the following 
+command:
+
+```
+git branch
+```
+
+In general, this is the procedure you will follow when working on our projects.

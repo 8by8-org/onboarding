@@ -12,8 +12,7 @@ The exercises in this repository cover the following topics:
 - Our recommended Git workflow
 - Configuring your environment 
 - TypeScript essentials
-- Unit testing with Vitest and React Testing Library
-- Developing components with Storybook
+- Unit testing with Vitest
 - Linting and formatting your code
 - Writing TSDoc comments
 - CI/CD pipeline basics
