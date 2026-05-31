@@ -1,11 +1,14 @@
 {
   "name": "onboarding",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Welcome to 8by8! This project will help you learn how to contribute to our codebases.",
   "main": "index.js",
   "scripts": {
-    "test": "vitest",
-    "storybook": "storybook dev -p 6006"
+    "format": "prettier \"**/*.{ts,js,md,json}\" --write",
+    "lint": "eslint .",
+    "onboard": "tsx src/scripts/onboard.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -20,18 +23,17 @@
   },
   "homepage": "https://github.com/8by8-org/onboarding#readme",
   "devDependencies": {
-    "@storybook/react-vite": "^10.3.6",
-    "@types/react": "^19.2.14",
+    "@vitest/coverage-v8": "^4.1.5",
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.9.1",
     "@types/react-dom": "^19.2.3",
+    "eslint": "^10.4.0",
+    "globals": "^17.6.0",
+    "jiti": "^2.6.1",
     "prettier": "^3.8.3",
-    "storybook": "^10.3.6",
+    "tsx": "^4.22.3",
     "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.4",
     "vitest": "^4.1.5"
-  },
-  "dependencies": {
-    "@vitejs/plugin-react": "^6.0.1",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
-    "vite": "^8.0.11"
   }
 }
