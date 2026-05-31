@@ -29,10 +29,30 @@ help confirm that your code still builds and follows the expected standards.
 
 ## Opening the Pull Request
 
-1. Push your feature branch to your fork on GitHub.
-2. Open your fork in GitHub.
-3. Start a pull request targeting the `development` branch of the upstream repo.
-4. Confirm the branch comparison is correct before creating the PR.
+1. Add the files that belong in your PR.
+
+```bash
+git add <relevant-files>
+```
+
+If every changed file in your working directory belongs in the PR, you can use
+`git add .` to stage all tracked and new files under the current directory.
+
+2. Create a commit with a clear message using the `-m` flag.
+
+```bash
+git commit -m "<clear summary of your changes>"
+```
+
+3. Push your local branch to your fork and set upstream tracking.
+
+```bash
+git push --set-upstream origin onboard-<your-username>
+```
+
+4. Open your fork in GitHub.
+5. Start a pull request targeting the `development` branch of the upstream repo.
+6. Confirm the branch comparison is correct before creating the PR.
 
 ## If Your Branch Is Behind Upstream
 
