@@ -14,7 +14,9 @@ Reformat the file so it matches the style used throughout the repo.
 
 1. Run `npm run format` to let Prettier rewrite the file.
 2. In VSCode, you can also enable format on save with the Prettier extension.
-3. Review the result and make sure the file is consistently formatted.
+3. Set up a ruler in VSCode at the 80 character mark so long lines are easier
+	to spot while you edit.
+4. Review the result and make sure the file is consistently formatted.
 
 ## Done Looks Like
 
@@ -23,4 +25,4 @@ Reformat the file so it matches the style used throughout the repo.
 
 ## Next Up
 
-Next Up: [Git](../prerequisites/git.md)
+Next Up: [01 - Making a PR](../wrapping-up/01-making-a-pr.md)
