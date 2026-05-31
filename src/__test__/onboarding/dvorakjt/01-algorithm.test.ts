@@ -23,16 +23,16 @@ describe('countVowels', () => {
     expect(countVowels('bcdfghjklmnpqrstvwxyz')).toBe(0);
   });
 
-  it('returns zero for empty strings.', () => {
+  it('returns zero for empty strings', () => {
     expect(countVowels('')).toBe(0);
   });
 
-  it('handles a mixture of uppercase and lowercase vowels and constants.', () => {
+  it('handles a mixture of uppercase and lowercase vowels and constants', () => {
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
     expect(countVowels(alphabet + alphabet.toUpperCase())).toBe(10);
   });
 
-  it('counts repeat instances of the same vowel.', () => {
+  it('counts repeat instances of the same vowel', () => {
     expect(countVowels('aaaaa')).toBe(5);
   });
 });
