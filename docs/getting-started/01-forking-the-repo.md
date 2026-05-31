@@ -19,7 +19,16 @@ This will take you to a form that allows you to customize your fork. Click the
 will create a fork of this repository under your account. Once the fork is
 created, you will be redirected to it.
 
-## 2. Cloning your fork
+## 2. Enabling workflows in your fork
+
+After your fork is created, open the "Actions" tab in your forked repository.
+Github may show a banner asking you to enable workflows. Click the button to
+enable workflows for the fork.
+
+This is important because our onboarding process uses Github Actions checks
+(`Test`, `Typecheck`, and `Lint`) on pushes and pull requests.
+
+## 3. Cloning your fork
 
 In order to make changes to your fork, you must clone it locally. From the
 landing page for your fork on Github, click the "Code" button at the top right
@@ -36,14 +45,14 @@ just copied. Press enter to execute the command.
 
 This will create a new directory inside your 8by8 directory.
 
-## 3. Creating a branch
+## 4. Creating a branch
 
 When developing a new feature, it is highly recommended to work from a feature
 branch. This keeps your development branch clean and makes it easy to sync your
 fork with the upstream repository owned by 8by8.
 
 Let's create our first feature branch. Open a terminal and navigate into the
-directory you cloned in step 2. Execute the following command, replacing
+directory you cloned in step 3. Execute the following command, replacing
 `<your-username>` with your Github username.
 
 ```
