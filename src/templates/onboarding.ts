@@ -183,7 +183,7 @@ export function buildWelcomeMessage(name: string, team: string): string {
  * @returns TODO: describe the grouped output.
  */
 export function groupByParity(numbers: number[]): { even: number[]; odd: number[] } {
-  return numbers.reduce(
+  return numbers.reduce<{ even: number[]; odd: number[] }>(
     (groups, value) => {
       if (value % 2 === 0) {
         groups.even.push(value);
@@ -193,7 +193,7 @@ export function groupByParity(numbers: number[]): { even: number[]; odd: number[
 
       return groups;
     },
-    { even: [], odd: [] } satisfies { even: number[]; odd: number[] },
+    { even: [], odd: [] },
   );
 }
 `,
@@ -241,6 +241,7 @@ export function formatTeamSummary(member: TeamMember): string {
 
 const newestMember: TeamMember = {
   name: "Avery",
+  // Intentional type error for this exercise.
   commits: "5",
 };
 
@@ -270,6 +271,7 @@ export function getHighestScore(entries: ScoreEntry[]): ScoreEntry {
 
 const scores: ScoreEntry[] = [
   { label: "docs", score: 4 },
+  // Intentional type error for this exercise.
   { label: "tests", score: "6" },
 ];
 
@@ -294,6 +296,7 @@ export function canAnnounceRelease(status: ReleaseStatus): boolean {
   return status === "published";
 }
 
+// Intentional type error for this exercise.
 const currentStatus: ReleaseStatus = "ready";
 
 canAnnounceRelease(currentStatus);
