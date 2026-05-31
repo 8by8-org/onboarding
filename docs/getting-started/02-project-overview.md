@@ -30,7 +30,7 @@ something like this:
 │   │   └── onboard.ts
 │   └── templates/
 │       └── onboarding.ts
-├── wiki/
+├── docs/
 │   ├── exercises
 │   ├── getting-started
 │   └── prerequisites
@@ -93,11 +93,10 @@ algorithm test scaffold in `src/__test__/onboarding/<your-github-username>`.
 The generator itself lives in `src/scripts/onboard.ts`, and the randomized
 exercise templates live in `src/templates/onboarding.ts`.
 
-### wiki
+### docs
 
-Markdown files that are automatically uploaded to the project Wiki with
-a Github Actions workflow. The `wiki/exercises` pages contain the instructions
-for the generated exercises.
+Markdown files that explain the onboarding flow. The `docs/exercises` pages
+contain the instructions for the generated exercises.
 
 ## Next Up
 

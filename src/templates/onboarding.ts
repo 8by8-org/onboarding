@@ -61,7 +61,7 @@ export function mergeSortedNumbers(left: number[], right: number[]): number[] {
     testTemplate: username => `/**
  * Exercise 1 test scaffold.
  *
- * Full instructions: ../../../wiki/exercises/01-algorithms-and-testing.md
+ * Full instructions: ../../../docs/exercises/01-algorithms-and-testing.md
  */
 
 import { describe, it } from "vitest";
@@ -97,7 +97,7 @@ export function countVowels(phrase: string): number {
     testTemplate: username => `/**
  * Exercise 1 test scaffold.
  *
- * Full instructions: ../../../wiki/exercises/01-algorithms-and-testing.md
+ * Full instructions: ../../../docs/exercises/01-algorithms-and-testing.md
  */
 
 import { describe, it } from "vitest";
@@ -134,7 +134,7 @@ export function rotateArray(values: number[], steps: number): number[] {
     testTemplate: username => `/**
  * Exercise 1 test scaffold.
  *
- * Full instructions: ../../../wiki/exercises/01-algorithms-and-testing.md
+ * Full instructions: ../../../docs/exercises/01-algorithms-and-testing.md
  */
 
 import { describe, it } from "vitest";
@@ -429,11 +429,11 @@ const templates: Record<ExerciseCategory, ExerciseTemplate[]> = {
 };
 
 const EXERCISE_GUIDE_PATHS: Record<ExerciseCategory, string> = {
-  algorithm: '../../../wiki/exercises/01-algorithms-and-testing.md',
-  tsdoc: '../../../wiki/exercises/02-writing-tsdoc-comments.md',
-  'type-errors': '../../../wiki/exercises/03-fixing-type-errors.md',
-  lint: '../../../wiki/exercises/04-fixing-linting-issues.md',
-  formatting: '../../../wiki/exercises/05-fixing-formatting.md',
+  algorithm: '../../../docs/exercises/01-algorithms-and-testing.md',
+  tsdoc: '../../../docs/exercises/02-writing-tsdoc-comments.md',
+  'type-errors': '../../../docs/exercises/03-fixing-type-errors.md',
+  lint: '../../../docs/exercises/04-fixing-linting-issues.md',
+  formatting: '../../../docs/exercises/05-fixing-formatting.md',
 };
 
 export function pickExerciseTemplate<TCategory extends ExerciseCategory>(

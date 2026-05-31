@@ -54,7 +54,7 @@ The generated files are:
 - `05-formatting.ts`
 - `01-algorithm.test.ts`
 
-Each generated file points to the matching page under `wiki/exercises`.
+Each generated file points to the matching page under `docs/exercises`.
 Use those markdown guides as the source of truth for what to do next and which
 npm scripts to run for each exercise.
 
