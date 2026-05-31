@@ -7,10 +7,10 @@
 // Exercise 2: replace the placeholder TSDoc with complete documentation.
 
 /**
- * TODO: explain the purpose of this function.
+ * Groups an array of numbers by parity.
  *
- * @param numbers TODO: describe the input collection.
- * @returns TODO: describe the grouped output.
+ * @param numbers An array of numbers to group.
+ * @returns An object containing two grouped arrays.
  */
 export function groupByParity(numbers: number[]): {
   even: number[];
