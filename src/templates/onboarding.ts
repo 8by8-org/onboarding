@@ -66,7 +66,7 @@ export function mergeSortedNumbers(left: number[], right: number[]): number[] {
 
 import { describe, it } from "vitest";
 
-import { mergeSortedNumbers } from "../../onboarding/${username}/01-algorithm.ts";
+import { mergeSortedNumbers } from "../../../onboarding/${username}/01-algorithm.ts";
 
 /**
  * Exercise 1 tests for ${username}.
@@ -102,7 +102,7 @@ export function countVowels(phrase: string): number {
 
 import { describe, it } from "vitest";
 
-import { countVowels } from "../../onboarding/${username}/01-algorithm.ts";
+import { countVowels } from "../../../onboarding/${username}/01-algorithm.ts";
 
 /**
  * Exercise 1 tests for the vowel counter.
@@ -139,7 +139,7 @@ export function rotateArray(values: number[], steps: number): number[] {
 
 import { describe, it } from "vitest";
 
-import { rotateArray } from "../../onboarding/${username}/01-algorithm.ts";
+import { rotateArray } from "../../../onboarding/${username}/01-algorithm.ts";
 
 /**
  * Exercise 1 tests for the array rotation helper.
