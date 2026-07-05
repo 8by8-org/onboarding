@@ -18,7 +18,7 @@ interface onboardingText {
  * @param name The developer name.
  * @returns A short note for the developer.
  */
-export function buildOnboardingNote(name: string): string {
+export function buildOnboardingNote(name: onboardingText): string {
   const details = { suffix: '!' };
 
   return `Hello, ${name}${details.suffix}`;
