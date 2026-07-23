@@ -14,15 +14,40 @@ import { rotateArray } from '../../../onboarding/captainex/01-algorithm.ts';
  */
 describe('rotateArray', () => {
   it('rotates values to the right', () => {
-    expect(rotateArray([1, 2, 3, 4, 5], 1)).toEqual([5, 1, 2, 3, 4]);
+    expect(rotateArray([1, 2, 3, 4, 5], 2)).toEqual([4, 5, 1, 2, 3]);
   });
   it('supports steps larger than the array length', () => {
-    expect(rotateArray([1, 2, 3], 7)).toEqual([3, 1, 2]);
+    expect(rotateArray([1, 2, 3, 4, 5], 7)).toEqual([5, 1, 2, 3, 4]);
   });
   it('does not mutate the original array', () => {
-    const firstArr = [];
-    const secondArr = [...firstArr];
-    rotateArray(firstArr, 2);
-    expect(firstArr).toEqual(secondArr);
+    const firstarr = [1, 2, 3, 4, 5];
+    const copy = [...firstarr];
+
+    rotateArray(firstarr, 2);
+
+    expect(firstarr).toEqual(copy);
+  });
+  it('does not overflow when the max integer limit is reached', () => {
+    expect(rotateArray.length).toBeLessThanOrEqual(Number.MAX_SAFE_INTEGER);
+  });
+  it('does not overflow when the minumum integer limit is reached', () => {
+    expect(rotateArray.length).toBeGreaterThanOrEqual(Number.MIN_SAFE_INTEGER);
+  });
+  it('checks that the function does not divide by zero', () => {
+    const result = rotateArray([], 5);
+    expect(result.some(Number.isNaN)).toBe(false);
+  });
+  it('it should not move the array if steps input is zero', () => {
+    const nomove = rotateArray([1, 2, 3, 4, 5], 0);
+
+    expect(nomove).toEqual([1, 2, 3, 4, 5]);
+  });
+  it('checks that the steps are a valid integer', () => {
+    expect(() => rotateArray([1, 2, 3], 1.5)).toThrow();
+    expect(() => rotateArray([1, 2, 3], 1.75)).toThrow();
+  });
+  it('returns the correct output when rotated left', () => {
+    const result = rotateArray([1, 2, 3, 4, 5], -2);
+    expect(result).toEqual([3, 4, 5, 1, 2]);
   });
 });

@@ -17,30 +17,17 @@
  */
 
 export function rotateArray(values: number[], steps: number): number[] {
+  //throw new Error('not implemented');
+
   /*
-    CREATE an index
+  -VALIDATE input; typecast or use catch/throw block
+  -Number.isInteger() will help; Math.trunc()
+  -beware overflow errors
 
-    ADD 1 to index
-    1 2 3
-    0 1 2
-    [0 1 2] 3
-    
-    1 2 3
-    X X 1 2 3
-    0 1 2 3 4
-
-    2 3 1 
-    arr.length() > 
-
-    const arr[] = [];
-    int run = 2;
-    let n = arr.length;
-
-    run %= n;
-
-    let temp = new Array(n);
-
-    int currIndex;
+  -use test file for all edge cases; Number.MAX_SAFE_INTEGER | Number.MIN_SAFE_INTEGER
+  -check for 0 steps or negative steps
+  -rotate an empty array
+  -reduce loops to 1
   */
   const n = values.length;
 
@@ -48,22 +35,9 @@ export function rotateArray(values: number[], steps: number): number[] {
 
   const temp = new Array(n);
 
-  for (let i = 0; i < steps; i++) {
-    temp[i] = values[n - steps + i];
-  }
-
-  for (let i = 0; i < n - steps; i++) {
-    temp[i + steps] = values[i];
-  }
-
-  for (let i = 0; i < n; i++) {
-    values[i] = temp[i];
+  for (let i = 0; i < values.length - 1; i++) {
+    temp[i] = temp[i + 1];
   }
 
   return temp;
 }
-
-const arr = [1, 2, 3, 4, 5, 6];
-const steps = 1;
-
-rotateArray(arr, steps);
