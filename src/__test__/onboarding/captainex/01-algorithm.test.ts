@@ -17,7 +17,7 @@ describe('rotateArray', () => {
     expect(rotateArray([1, 2, 3, 4, 5], 2)).toEqual([4, 5, 1, 2, 3]);
   });
   it('supports steps larger than the array length', () => {
-    expect(rotateArray([1, 2, 3, 4, 5], 7)).toEqual([5, 1, 2, 3, 4]);
+    expect(rotateArray([1, 2, 3, 4, 5], 7)).toEqual([4, 5, 1, 2, 3]);
   });
   it('does not mutate the original array', () => {
     const firstarr = [1, 2, 3, 4, 5];
@@ -28,14 +28,14 @@ describe('rotateArray', () => {
     expect(firstarr).toEqual(copy);
   });
   it('does not overflow when the max integer limit is reached', () => {
-    expect(rotateArray.length).toBeLessThanOrEqual(Number.MAX_SAFE_INTEGER);
+    expect(rotateArray([1, 2], Number.MAX_SAFE_INTEGER)).toEqual([2, 1]);
   });
   it('does not overflow when the minumum integer limit is reached', () => {
-    expect(rotateArray.length).toBeGreaterThanOrEqual(Number.MIN_SAFE_INTEGER);
+    expect(rotateArray([1], Number.MIN_SAFE_INTEGER)); //TODO
   });
   it('checks that the function does not divide by zero', () => {
     const result = rotateArray([], 5);
-    expect(result.some(Number.isNaN)).toBe(false);
+    expect(result).toEqual([]);
   });
   it('it should not move the array if steps input is zero', () => {
     const nomove = rotateArray([1, 2, 3, 4, 5], 0);

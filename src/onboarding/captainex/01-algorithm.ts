@@ -29,14 +29,27 @@ export function rotateArray(values: number[], steps: number): number[] {
   -rotate an empty array
   -reduce loops to 1
   */
+
+  //check if is integer, write throw expression: throw new Error
+
   const n = values.length;
 
-  steps %= n;
+  steps = steps < 0 ? (steps % n) + values.length : steps % n;
+
+  if (steps === 0) {
+    throw new Error('Divide by zero!');
+  } /*else if (steps % n != 0) {
+    throw new Error('Input is not a whole integer!');
+  }*/
 
   const temp = new Array(n);
 
-  for (let i = 0; i < values.length - 1; i++) {
-    temp[i] = temp[i + 1];
+  //1 2 3 4 5 > 2 un un un un > 2 3 un un un > 2 3 4 un un > 2 3 4 5 un
+  // un un 1 2 un > un un 1 2 3 > 4 un 1 2 3 > 4 5 1 2 3
+  for (let i = 0; i < values.length; i++) {
+    const walk = (i + steps) % n;
+
+    temp[walk] = values[i];
   }
 
   return temp;
