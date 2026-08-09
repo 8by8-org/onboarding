@@ -38,9 +38,10 @@ describe('rotateArray', () => {
     expect(result).toEqual([]);
   });
   it('it should not move the array if steps input is zero', () => {
-    const nomove = rotateArray([1, 2, 3, 4, 5], 0);
+    const test = [1, 2, 3, 4, 5];
+    const result = rotateArray(test, 0);
 
-    expect(nomove).toEqual([1, 2, 3, 4, 5]);
+    expect(result).toEqual(test);
   });
   it('checks that the steps are a valid integer', () => {
     expect(() => rotateArray([1, 2, 3], 1.5)).toThrow();
